@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Calculadora de média</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <title> Imersão Dev Alura - Aula 01</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">
+      Calculadora de média</h1>
+      <p class="page-subtitle">
+      Descubra qual a sua média de nota de todas as provas!
+      </p>
+      <h1 class="page-title"> ImersãoDev_ </h1>
+      <p></p>
+      <br><br><br><br><br><br><br><br><br>
+      Nome
+      <input type = "text" id="nome" ><br>
+      Nota 1º Bimestre
+      <input type = "number" id="nota1"><br>
+      Nota 2º Bimestre
+      <input type = "number" id="nota2"><br>
+      Nota 3º Bimestre
+      <input type = "number" id="nota3"><br>
+      Nota 4º Bimestre
+      <input type = "number" id="nota4"><br>
+      <button onclick = "clicar()">Resultado</button>
+      <h2 id="valorMedia"></h2>
+    </div>
+      
+    <a href="https://alura.com.br/" target="_blank">
+    <img src="data:image/png;base64,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" alt="" class="alura-logo">
+    </a>
+    
+  </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
